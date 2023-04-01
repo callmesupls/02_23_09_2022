@@ -1,0 +1,43 @@
+<!-- bootstrap css 4.5.0 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+  <!-- font awesome 5.13.1 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+<form action="">
+    Nhập họ và tên:<br>
+    <input type="text" name="" id="" required minlength="4" maxlength="">
+    <br>
+    Nhập vào email:<br>
+    <input type="email" name="" id="" required>
+    <br>
+    Nhập vào số điện thoại:<br>
+    <input type="number" name="" id="">
+    <br>
+    Nhập vào tên đăng nhập:<br>
+    <input type="text" name="" id="">
+    <br>
+    Nhập vào mật khẩu:<br>
+    <input type="password" name="" id="ipnPassword">
+    <button class="btn btn-outline-secondary" type="button" id="btnPassword">
+        <span class="fas fa-eye"></span>
+    </button>
+    <br>
+    Nhậo lại mật khẩu:<br>
+    <input type="password" name="" id="ipnPassword">
+    <button class="btn btn-outline-secondary" type="button" id="btnPassword">
+        <span class="fas fa-eye"></span>
+    </button>
+    <br>
+    <input type="submit" value="Đăng ký">
+</form>
+<script>
+    // step 1
+    const ipnElement = document.querySelector('#ipnPassword')
+    const btnElement = document.querySelector('#btnPassword')
+        // step 2
+        btnElement.addEventListener('click', function() {
+        // step 3
+        const currentType = ipnElement.getAttribute('type')
+        // step 4
+        ipnElement.setAttribute('type',currentType === 'password' ? 'text' : 'password')
+    })
+</script>
